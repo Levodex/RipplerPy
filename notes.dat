@@ -1,0 +1,68 @@
+==== Notes for Bootstrap ====
+==== 06/30/2017 ====
+	==== Basic ====
+		Bootstrap works through grids.
+		Total 12 columns exist for large viewports.
+		basically everything is a table of grids.
+		lowest resolution device settings is the default
+	==== Grid system ====
+		Rows must be placed within a .container class for proper alignment and padding.
+		Content should be placed within the columns, and only columns may be the immediate children of rows.
+		Columns create gutters (gaps between column content) via padding.
+		Grid columns are created by specifying the number of twelve available columns you wish to span.
+		
+		For example, three equal columns would use three .col-xs-4.
+			Container grid class to use = 12 / number of columns to use
+			So for 4 required columns we use 4 .col-xs-3,
+			For 6 required columns we use 6 .col-xs-2
+		And so on
+	==== Media query ====
+		Conditional css is called media query
+		Media Queries in Bootstrap allow you to move, show and hide content based on the viewport size.
+		media query has the syntax:
+			@media (query1) and (query2) and ...
+		Example
+			@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)
+	==== Grid system specifics ====
+		The four display classes have Class prefixes
+			.col-xs-
+			.col-sm-
+			.col-md-
+			.col-lg-
+		followed by column specifier
+		The column sum always needs to be 12 which can be made any possible way
+		Illustration for multiple specifiers:
+			<div class = "col-sm-3 col-md-6 col-lg-4">....</div>
+			<div class = "col-sm-9 col-md-6 col-lg-8">....</div>
+		will render
+			25%, 75% on small
+			50 - 50 on mid
+			33 - 66 on large
+		displays
+		so,
+			col-XX-Y
+		means
+			XX - viewport for xs, sm, md, lg
+			Y - Yth fraction of 12 giving Y/12% width value
+	==== hiding, visibility & clearfix ====
+		hidden-XX will render
+			element hidden on viewport's display
+		visible-XX will render
+			element visible on viewport's display
+		Column clearance issue may be present with multiple viewport tiers
+			(One column may be taller than the other)
+		To fix that, use a combination of a class .clearfix and the visible/hidden classes
+==== 07/01/2017 ====
+	==== offsets ====
+		An example
+			col-md-offset-3
+		where
+			col-XX-offset-Y
+		gives an empty offset column on XX viewport and Y number of empty columns
+	==== Nesting columns ====
+		To nest your content with the default grid, add a new .row div
+		and a set of .col-md-* columns within an existing .col-md-* column.
+		Nested rows should include a set of columns that add up to 12.
+	==== Ordering ====
+		You can easily change the order of built-in grid columns with .col-md-push-* and .col-md-pull-* classes
+			where * range from 1 to 11.

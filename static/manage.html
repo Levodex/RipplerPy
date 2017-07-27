@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<head>
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
+	</head>
+	<link rel="stylesheet" href="style_base.css">
+	<body>
+		<div id="navbar">
+			
+		</div>
+		<div class = "clearfix visible-xs visible-sm visible-md visible-lg"></div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8" id="contents">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-offset-4 col-md-4 col-lg-offset-4 col-lg-4" id="ititle">
+								Manage Story
+							</div>
+						</div>
+						<div class = "clearfix visible-xs visible-sm visible-md visible-lg"></div>
+					</div>
+					<hr noshade="1" width="96%"/>
+					<div class="container-fluid">
+						<form method="POST" action="/upload" enctype="multipart/form-data">
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8" id="i1">
+									<span class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+										Upload Story 1 Ripple QR image:
+									</span>
+									<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+										<input type="file" name="qr1" accept=".png">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8" id="i1">
+									<span class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+										Upload Story 2 Ripple QR image:
+									</span>
+									<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+										<input type="file" name="qr2" accept=".png">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8" id="i3">
+									<button id="submitbtn">Interlink</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		<div class = "clearfix visible-xs visible-sm visible-md visible-lg"></div>
+		</div>
+		<div class = "clearfix visible-xs visible-sm visible-md visible-lg"></div>
+	</body>
+	<script src="navjs.js"></script>
+</html>
